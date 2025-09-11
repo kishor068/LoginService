@@ -1,31 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="776e2f48-c06e-4d63-a0d5-25ed23c7aeb0" name="Changes" comment="" />
+    <list default="true" id="0a18305a-d909-49f5-9ede-ffd5ff327102" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
   "lastFilter": {
     "state": "OPEN",
-    "assignee": "kishor068"
+    "assignee": "gokulgadkar"
   }
 }]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/kishor068/LoginService.git",
-    "accountId": "addf7bad-1e7b-401e-b05e-07536424226e"
+    "accountId": "15f32ada-21f3-44fb-af5b-77bf1c2d6bca"
   }
 }]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
+  "associatedIndex": 7
 }]]></component>
-  <component name="ProjectId" id="32XiPGukyHe6qZXdHsSX7OMgvCz" />
+  <component name="ProjectId" id="32XoEtxpD54YXJ14WFH8hP63EYx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,33 +44,18 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/LoginService",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "globalexceptionhandlerfeature"
   }
 }]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="776e2f48-c06e-4d63-a0d5-25ed23c7aeb0" name="Changes" comment="" />
-      <created>1757573291815</created>
+      <changelist id="0a18305a-d909-49f5-9ede-ffd5ff327102" name="Changes" comment="" />
+      <created>1757576169879</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1757573291815</updated>
-      <workItem from="1757573293785" duration="21000" />
+      <updated>1757576169879</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
 </project>
