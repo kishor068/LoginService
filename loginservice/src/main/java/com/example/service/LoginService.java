@@ -4,9 +4,11 @@ package com.example.service;
 import com.example.dao.LoginRepository;
 import com.example.entity.LoginEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class LoginService {
     @Autowired
     public LoginRepository loginRepository;
@@ -18,7 +20,7 @@ public class LoginService {
 
     public boolean Login(String username, String password)
     {
-        return loginRepository.findByUserName(username)
+        return loginRepository.findByUsername(username)
                 .map(user->user.getPassword().equals(password))
                 .orElse(false);
 
