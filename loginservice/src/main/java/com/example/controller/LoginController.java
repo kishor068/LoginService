@@ -2,6 +2,7 @@ package com.example.controller;
 
 import com.example.dao.LoginRepository;
 import com.example.entity.LoginEntity;
+import com.example.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -36,12 +37,12 @@ public class LoginController {
     @GetMapping("/searchusers")
     public ResponseEntity<List<LoginEntity>> getusers()
     {
-        return loginService.getAll();
+        return ResponseEntity.ok(loginService.getAll());
     }
 
     @PostMapping("/adduser")
     public ResponseEntity<LoginEntity> createuser(@RequestBody LoginEntity loginEntity)
     {
-        return loginService.createUser(loginEntity);
+        return ResponseEntity.ok(loginService.createUser(loginEntity));
     }
 }

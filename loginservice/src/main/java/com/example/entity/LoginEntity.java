@@ -17,7 +17,7 @@ public class LoginEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotNull(message = "Id cannot be null")
+//    @NotNull(message = "Id cannot be null")
     private Long id;
     @Column
     @NotBlank(message = "Name cannot be Blank")
