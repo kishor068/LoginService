@@ -14,8 +14,7 @@ import java.util.List;
 @CrossOrigin(origins="http://localhost:3000")
 public class LoginController {
 
-    @Autowired
-    private LoginRepository loginRepository;
+
 
     @Autowired
     private LoginService loginService;
