@@ -14,14 +14,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
-//@SpringBootTest
-@ActiveProfiles("test")
 @SpringBootTest
-//@DataJpaTest
+@ActiveProfiles("test")
+
+
+
 public class LoginTest {
     @Autowired
     public LoginRepository loginRepository;
@@ -37,6 +38,14 @@ public class LoginTest {
     }
 
     @Test
+    @Sql(scripts = "/data.sql", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+    public  void logincheck(){
+        //(HttpStatus.OK,loginService.Login("Alice", "Password123!"));
+        Boolean res= loginService.Login("Alice", "Password123!");
+        assertTrue(res);
+    }
+
+    @Test
 //    @Disabled
     @DisplayName("FInd Initial records")
     public void findInitialRecords() throws Exception {
@@ -48,12 +57,13 @@ public class LoginTest {
     @Test
     @DisplayName("Checking Login Status")
     public void checkLoginStatus()  {
-        try{
-            loginController.loginUser(new LoginEntity(1L,"Kishor","Qwerty123!@#"));
-        }catch (Exception ex){
-            fail("Login Failed");
-        }
+        LoginEntity loginEntity=new LoginEntity(2L,"Kishorraj","Qwerty123!@#");
+        loginRepository.save(loginEntity);
+        ResponseEntity<String> response = loginController.loginUser(loginEntity);
+        assertEquals(HttpStatus.OK,response.getStatusCode());
+        assertEquals("Login Successful",response.getBody());
     }
+
 
     @Test
     @DisplayName("Checking Login Fail Status")
@@ -78,13 +88,10 @@ public class LoginTest {
 
 
 public void parameterizedTestForUser(Long id, String username, String password, boolean expectedSuccess) {
-    // Arrange: ensure valid user exists in DB
+
     loginRepository.save(new LoginEntity(1L, "Kishor", "Qwerty123!@#"));
-//    loginRepository.save(new LoginEntity(L, "Kishor", "Qwerty123!@#"));
-    // Act
     ResponseEntity<String> response = loginController.loginUser(new LoginEntity(id, username, password));
 
-    // Assert
     if (expectedSuccess) {
         assertEquals(HttpStatus.OK, response.getStatusCode(), "Expected success login");
         assertEquals("Login Successful", response.getBody());
@@ -104,15 +111,11 @@ public void parameterizedTestForUser(Long id, String username, String password, 
 
 
     public void parameterizedTestForUserFail(Long id, String username, String password ) {
-        // Arrange: ensure valid user exists in DB
+
         loginRepository.save(new LoginEntity(1L, "Kishor", "Qwerty123!@#"));
         loginRepository.save(new LoginEntity(2L, "Mahesha", "Qwerty123!@#"));
 
-        // Act
         ResponseEntity<String> response = loginController.loginUser(new LoginEntity(id, username, password));
-
-        // Assert
-
 
             assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode(), "Expected failed login");
             assertEquals("Invalid username or password", response.getBody());
@@ -125,7 +128,6 @@ public void parameterizedTestForUser(Long id, String username, String password, 
             "2,Rajesha,Qwerty123!@#"
 
     })
-
 
     public void parameterizedTestForUserTrue(Long id, String username, String password ) {
         // Arrange: ensure valid user exists in DB
@@ -140,7 +142,6 @@ public void parameterizedTestForUser(Long id, String username, String password, 
 
 
     }
-
 
     @BeforeEach
     public void testBeforeEach(){
