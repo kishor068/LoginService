@@ -30,7 +30,7 @@
 		<java.version>17</java.version>
 		<spring-cloud.version>2025.0.0</spring-cloud.version>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.login>squ_411ad8227681555b997ef2b356044e4dfc316a7a</sonar.login>
+        <sonar.login>squ_63a3af54a1a41ab575ceec7493fab2b69f543a26</sonar.login>
         <sonar.java.binaries>target/classes</sonar.java.binaries>
 
 	</properties>
@@ -120,7 +120,7 @@
             <version>0.8.12</version>
         </dependency>
 
-    </dependencies>
+<!--    </dependencies>-->
 
 
         <dependency>
