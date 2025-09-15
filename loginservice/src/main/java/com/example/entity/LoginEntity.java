@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class LoginEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
 //    @NotNull(message = "Id cannot be null")
     private Long id;
     @Column
