@@ -101,8 +101,6 @@ public void parameterizedTestForUser(Long id, String username, String password, 
             "3,Kishorrdgd123,Qwerty123!@#",
 //            "1,Kishor,Qwerty123!@#"
     })
-
-
     public void parameterizedTestForUserFail(Long id, String username, String password ) {
         // Arrange: ensure valid user exists in DB
         loginRepository.save(new LoginEntity(1L, "Kishor", "Qwerty123!@#"));
@@ -125,8 +123,6 @@ public void parameterizedTestForUser(Long id, String username, String password, 
             "2,Rajesha,Qwerty123!@#"
 
     })
-
-
     public void parameterizedTestForUserTrue(Long id, String username, String password ) {
         // Arrange: ensure valid user exists in DB
         loginRepository.save(new LoginEntity(1L, "Kishor", "Qwerty123!@#"));
