@@ -16,8 +16,7 @@ import lombok.NoArgsConstructor;
 public class LoginEntity {
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @NotNull(message = "Id cannot be null")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
     @NotBlank(message = "Name cannot be Blank")
@@ -32,4 +31,9 @@ public class LoginEntity {
                     "no whitespace, " +
                     "and be 8-20 characters long.")
     private String password;
+
+    public LoginEntity(String username, String password) {
+        this.username=username;
+        this.password=password;
+    }
 }
