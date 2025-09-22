@@ -258,6 +258,9 @@
 
 </plugins>
 </build>
+         <finalName>
+                  loginservice
+         </finalName>
 <repositories>
 <repository>
     <id>spring-snapshots</id>
