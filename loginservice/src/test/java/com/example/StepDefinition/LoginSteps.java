@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LoginSteps {
 
-    @Autowired
+//    @Autowired
     private LoginService loginService;
 
     private boolean loginResult;
