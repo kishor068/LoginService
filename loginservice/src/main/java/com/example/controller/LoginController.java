@@ -42,7 +42,6 @@ public class LoginController {
         }
     }
 
-
     @GetMapping("/searchusers")
     public ResponseEntity<List<LoginEntity>> getusers()
     {
